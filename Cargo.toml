@@ -1,0 +1,22 @@
+[package]
+name = "hash2curve_example"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+sha2 = { version = "0.10", default-features = false }
+
+ark-ff = { version = "0.4.0", default-features = false }
+ark-ec = { version = "0.4.0", default-features = false }
+ark-bls12-381 = { version = "0.4.0", default-features = false, features = [ "curve" ] }
+ark-ed-on-bls12-381-bandersnatch = { version = "0.4.0" }
+
+[patch.crates-io]
+ark-ec = { git = "https://github.com/arkworks-rs/algebra"}
+ark-ff = { git = "https://github.com/arkworks-rs/algebra"}
+ark-bls12-381 = { git = "https://github.com/arkworks-rs/algebra"}
+ark-ed-on-bls12-381-bandersnatch = { git = "https://github.com/arkworks-rs/algebra" }
+
+ark-std = { git = "https://github.com/arkworks-rs/std"}
+ark-serialize = { git = "https://github.com/arkworks-rs/algebra"}
+ark-serialize-derive = { git = "https://github.com/arkworks-rs/algebra"}
